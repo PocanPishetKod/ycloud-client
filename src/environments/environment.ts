@@ -4,11 +4,12 @@
 
 export const environment = {
   production: false,
-    authority: "https://localhost:4201/api",
+    authority: "https://localhost:5001",
     scope: "openid email roles YCloud",
     clientId: "user-client",
     redirectUri: "https://localhost:4201/signin/redirect",
-    postLogoutRedirectUri: ""
+    postLogoutRedirectUri: "",
+    api: "https://localhost:4201/api"
 };
 
 /*
