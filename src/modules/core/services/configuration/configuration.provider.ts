@@ -9,6 +9,7 @@ export class ConfigurationProvider {
     public provide(): Configuration {
         return new Configuration(environment.authority, environment.scope,
             environment.clientId, environment.redirectUri,
-            environment.postLogoutRedirectUri, environment.api);
+            environment.postLogoutRedirectUri, environment.api,
+            environment.production);
     }
 }
