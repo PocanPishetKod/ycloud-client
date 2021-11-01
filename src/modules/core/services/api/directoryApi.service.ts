@@ -7,29 +7,20 @@ import { ICreateDirectoryQuery } from "../../models/api/queries/createDirectoryQ
 import { Configuration } from "../configuration/configuration";
 import { ConfigurationProvider } from "../configuration/configuration.provider";
 import { HttpClientWrapper } from "../http/http-client-wrapper.service";
-import { StatusCodesHandlerService } from "./statusCodesHandler.service";
+import { ApiBase } from "./apiBase";
 
 const Uri: string = "/directory";
 
 @Injectable({
     providedIn: "root"
 })
-export class DirectoryApiService {
+export class DirectoryApiService extends ApiBase {
     private readonly _configuration: Configuration;
 
     constructor(private _httpClientWrapper: HttpClientWrapper,
-        configurationProvider: ConfigurationProvider,
-        private _statusCodesHandlerService: StatusCodesHandlerService) {
+        configurationProvider: ConfigurationProvider) {
+            super();
             this._configuration = configurationProvider.provide();
-    }
-
-    private throwIfNoSucceeded(response: HttpResponseBase): void {
-        if (response.ok) {
-            return;
-        }
-
-        this._statusCodesHandlerService.handle(response);
-        throw new InvalidStatusCodeError();
     }
 
     public async getById(id: string): Promise<IDirectory> {

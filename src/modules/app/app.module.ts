@@ -6,6 +6,7 @@ import { DriveModule } from '../drive/drive.module';
 
 import { AppComponent } from './app.component';
 import { RoutesProvider } from '../core/services/routing/routes-provider';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { RoutesProvider } from '../core/services/routing/routes-provider';
         BrowserModule,
         RouterModule,
         AuthModule,
-        DriveModule
+        DriveModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

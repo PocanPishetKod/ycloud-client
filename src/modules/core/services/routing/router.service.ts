@@ -15,7 +15,12 @@ export class RouterService {
         this._router.navigate([url]);
     }
 
-    public goToDirectory(): void {
-        this.goTo(`/${RoutesProvider.directory}`);
+    public goToDirectory(id?: string): void {
+        if (id == null || id == undefined){
+            this.goTo(`/${RoutesProvider.directory}`);
+        }
+        else {
+            this.goTo(`/${RoutesProvider.directory}/${id}`);
+        }
     }
 }

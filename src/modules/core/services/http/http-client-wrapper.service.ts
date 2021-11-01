@@ -15,7 +15,7 @@ export class HttpClientWrapper {
         let result = new HttpHeaders();
         let token = await this._authServiceWrapper.getToken();
         if (token) {
-            result = result.append("Bearer", token);
+            result = result.append("Authorization", `Bearer ${token}`);
         }
 
         return result;
