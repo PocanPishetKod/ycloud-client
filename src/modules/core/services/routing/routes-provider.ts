@@ -12,7 +12,7 @@ export class RoutesProvider {
         return [
             { path: this.baseUri, redirectTo: `/${this.directory}`, pathMatch: "full" },
             { path: this.signInRedirect, component: SignInRedirectComponent },
-            { path: this.directory, component: DirectoryComponent, canActivate: [AuthGuard] }
+            { path: this.directory, component: DirectoryComponent, /*canActivate: [AuthGuard]*/ }
         ];
     }
 }

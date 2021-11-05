@@ -9,7 +9,7 @@ export const environment = {
     clientId: "user-client",
     redirectUri: "https://localhost:4201/signin/redirect",
     postLogoutRedirectUri: "",
-    api: "https://localhost:4201/api"
+    api: "https://localhost:4201/api",
 };
 
 /*

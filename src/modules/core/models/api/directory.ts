@@ -1,10 +1,8 @@
 import { IAccessMember } from "./accessMember";
 import { IFile } from "./file";
+import { IFileSystemElement } from "./fileSystemElement";
 
-export interface IDirectory {
-    id: string;
-    name: string;
-    size: number;
+export interface IDirectory extends IFileSystemElement {
     directories: IDirectory[];
     files: IFile[];
     accessMembers: IAccessMember[];

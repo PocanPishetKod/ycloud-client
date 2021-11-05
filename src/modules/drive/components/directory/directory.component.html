@@ -1,3 +1,25 @@
-<div>
-    Hello world
+<directory-item-toolbar [directoryItems]="selectedItems" (onCloseButtonClicked)=""></directory-item-toolbar>
+<div class="directory-container">
+    <div class="tool-container">
+        <div fxLayout="row" fxLayoutGap="5px">
+            <input type="file" multiple style="display: none;" id="loadFiles" (change)="filesSelected($event)" />
+            <button mat-raised-button color="primary" (click)="showLoadFiles()">
+                Добавить файлы
+            </button>
+            <button 
+                mat-raised-button color="primary"
+                (click)="showCreateDirectory()">
+                Создать папку
+            </button>
+        </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="15%" fxLayout="column" fxLayoutAlign="center center"
+            fxLayoutGap="30px"
+            *ngFor="let item of getElements()"
+            (click)="selectItem(item)">
+            <img src="{{item.icon}}" class="element-icon" />
+            <span class="element-text">{{item.fileSystemElement.name}}</span>
+        </div>
+    </div>
 </div>

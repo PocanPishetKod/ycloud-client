@@ -7,6 +7,16 @@ import { DriveModule } from '../drive/drive.module';
 import { AppComponent } from './app.component';
 import { RoutesProvider } from '../core/services/routing/routes-provider';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from "@angular/material/icon";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from "@angular/material/toolbar"
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from "@angular/material/dialog";
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
 
 @NgModule({
     declarations: [
@@ -18,7 +28,17 @@ import { HttpClientModule } from '@angular/common/http';
         RouterModule,
         AuthModule,
         DriveModule,
-        HttpClientModule
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatDialogModule,
+        FormsModule,
+        CommonModule,
+        MatInputModule,
+        MatMenuModule
     ],
     providers: [],
     bootstrap: [AppComponent]

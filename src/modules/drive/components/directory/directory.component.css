@@ -1,0 +1,28 @@
+.directory-icon {
+    font-size: 60px;
+}
+
+.directory-container {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 10px;
+    border-color: white;
+}
+
+.tool-container {
+    margin-bottom: 2%;
+}
+
+.element-text {
+    font-size: smaller;
+    max-width: 100%;
+    max-height: 3em;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.element-icon {
+    margin: 2% !important;
+    padding: 0px !important;
+}
